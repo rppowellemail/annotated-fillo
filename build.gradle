@@ -1,0 +1,27 @@
+group 'com.rppowell.annotatedfillo'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.apache.poi/poi
+    compile group: 'org.apache.poi', name: 'poi', version: '3.17'
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.17'
+
+    // https://mvnrepository.com/artifact/com.codoid.products/fillo
+    compile group: 'com.codoid.products', name: 'fillo', version: '1.18'
+
+    // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.11.0'
+
+    // https://mvnrepository.com/artifact/org.testng/testng
+    testCompile group: 'org.testng', name: 'testng', version: '6.14.3'
+
+    //testCompile group: 'junit', name: 'junit', version: '4.12'
+}
