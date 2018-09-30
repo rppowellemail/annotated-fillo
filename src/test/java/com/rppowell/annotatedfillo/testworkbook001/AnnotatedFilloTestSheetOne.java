@@ -40,7 +40,7 @@ public class AnnotatedFilloTestSheetOne {
         Connection connection=fillo.getConnection(xlsxFilename);
         Recordset recordset=connection.executeQuery("Select * From TestSheetOne");
         while(recordset.next()) {
-            AnnotatedFilloTestSheetOne annotatedFilloTestSheetOne = (AnnotatedFilloTestSheetOne) AnnotatedFilloFactory.extract(recordset, AnnotatedFilloTestSheetOne.class);
+            AnnotatedFilloTestSheetOne annotatedFilloTestSheetOne = (AnnotatedFilloTestSheetOne) AnnotatedFilloFactory.extractClassFromRecordset(recordset, AnnotatedFilloTestSheetOne.class);
             System.out.println(annotatedFilloTestSheetOne.toString());
         }
         recordset.close();

@@ -40,7 +40,6 @@ Extracting the class from Fillo recordset:
         Connection connection=fillo.getConnection(xlsxFilename);
         Recordset recordset=connection.executeQuery("Select * From TestSheetOne");
         while(recordset.next()) {
-            //AnnotatedTestSheetOne testSheetOne = (AnnotatedTestSheetOne) AnnotatedFilloFactory.extract(workbook, 1, AnnotatedTestSheetOne.class);
             AnnotatedFilloTestSheetOne annotatedFilloTestSheetOne = (AnnotatedFilloTestSheetOne) AnnotatedFilloFactory.extract(recordset, AnnotatedFilloTestSheetOne.class);
             System.out.println(annotatedFilloTestSheetOne.toString());
         }
